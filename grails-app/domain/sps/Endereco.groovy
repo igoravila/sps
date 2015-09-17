@@ -1,11 +1,12 @@
 package sps
+
 import javax.xml.bind.annotation.XmlRootElement
 import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 
 @XmlRootElement(name="xmlcep")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.NONE)
 class Endereco implements Serializable {
 	@XmlElement(name="cep")
 	String cep;
@@ -22,5 +23,15 @@ class Endereco implements Serializable {
 	@XmlElement(name="ibge")
 	String ibge;
 	static constraints = {
+		cep(blank:false)
+		logradouro()
+		complemento()
+		bairro()
+		localidade()
+		uf()
+		ibge()
+	}
+	String toString() {
+		cep
 	}
 }

@@ -1,8 +1,8 @@
 dataSource {
 	pooled = true
 	driverClassName = "org.postgresql.Driver"
-	username = "postgres"
-	password = "abob2010@"
+	username = "dyukiuwlnfbkkl"
+	password = "AAwtcOEHS3kbK7MPJ8hFfBArx2"
 }
 hibernate {
 	cache.use_second_level_cache=true
@@ -15,30 +15,20 @@ environments {
 	development{
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:postgresql://localhost:5432/sps"
+			url = "jdbc:postgresql://ec2-54-235-147-211.compute-1.amazonaws.com:5432/d81nqjo6620ngp"
 		}
 	}
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:postgresql://localhost:5432/sps"
+			url = "jdbc:postgresql://ec2-54-235-147-211.compute-1.amazonaws.com:5432/d81nqjo6620ngp"
 		}
 	}
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:postgresql://localhost:5432/sps"
-			properties {
-				maxActive = -1
-				minEvictableIdleTimeMillis=1800000
-				timeBetweenEvictionRunsMillis=1800000
-				numTestsPerEvictionRun=3
-				testOnBorrow=true
-				testWhileIdle=true
-				testOnReturn=false
-				validationQuery="SELECT 1"
-				jdbcInterceptors="ConnectionState"
-			}
+			url = "jdbc:postgresql://ec2-54-235-147-211.compute-1.amazonaws.com:5432/d81nqjo6620ngp"
+
 		}
 	}
 }
