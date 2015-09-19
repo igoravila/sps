@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="layout" content="main" />
 <g:set var="entityName"
-	value="${message(code: 'pessoa.label', default: 'Inscricao')}" />
+	value="${message(code: 'pessoa.label', default: 'Endereco')}" />
 <title><g:message code="default.create.label"
 		args="[entityName]" /></title>
 <g:javascript library="jquery" />
@@ -36,15 +36,6 @@
 		</g:hasErrors>
 		<g:form action="save">
 			<g:hiddenField name="cep" value="${pessoaInstance?.cep}" />
-			<g:hiddenField name="logradouro"
-				value="${pessoaInstance?.logradouro}" />
-			<g:hiddenField name="complemento"
-				value="${pessoaInstance?.complemento}" />
-			<g:hiddenField name="bairro" value="${pessoaInstance?.bairro}" />
-			<g:hiddenField name="localidade"
-				value="${pessoaInstance?.localidade}" />
-			<g:hiddenField name="uf" value="${pessoaInstance?.uf}" />
-			<g:hiddenField name="ibge" value="${pessoaInstance?.ibge}" />
 			<div class="dialog">
 				<div>
 					<table>
@@ -77,6 +68,47 @@
 							</tr>
 						</tbody>
 					</table>
+					<table id="mainContent">
+						<tbody>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.logradouro.label" default="Logradouro" /></td>
+								<td valign="top" class="value"><g:textField
+										name="logradouro" value="${pessoaInstance?.logradouro}" /></td>
+							</tr>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.complemento.label" default="Complemento" /></td>
+								<td valign="top" class="value"><g:textField
+										name="complemento" value="${pessoaInstance?.complemento}" />
+								</td>
+							</tr>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.bairro.label" default="Bairro" /></td>
+								<td valign="top" class="value"><g:textField name="bairro"
+										value="${pessoaInstance?.bairro}" /></td>
+							</tr>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.lcoalidade.label" default="Localidade" /></td>
+								<td valign="top" class="value"><g:textField
+										name="localidade" value="${pessoaInstance?.localidade}" /></td>
+							</tr>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.uf.label" default="UF" /></td>
+								<td valign="top" class="value"><g:textField name="uf"
+										value="${pessoaInstance?.uf}" /></td>
+							</tr>
+							<tr class="prop">
+								<td valign="top" class="name"><g:message
+										code="pessoa.ibge.label" default="IBGE" /></td>
+								<td valign="top" class="value"><g:textField name="ibge"
+										value="${pessoaInstance?.ibge}" /></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<div class="buttons">
@@ -92,46 +124,9 @@
 				<g:textField name="cep" />
 				<g:submitButton name="Procurar CEP" />
 			</g:formRemote>
-			<table id="mainContent">
-				<tbody>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.logradouro.label" default="Logradouro" /></td>
-						<td valign="top" class="value"><g:textField name="logradouro"
-								value="${pessoaInstance?.logradouro}" /></td>
-					</tr>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.complemento.label" default="Complemento" /></td>
-						<td valign="top" class="value"><g:textField
-								name="complemento" value="${pessoaInstance?.complemento}" /></td>
-					</tr>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.bairro.label" default="Bairro" /></td>
-						<td valign="top" class="value"><g:textField name="bairro"
-								value="${pessoaInstance?.bairro}" /></td>
-					</tr>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.lcoalidade.label" default="Localidade" /></td>
-						<td valign="top" class="value"><g:textField name="localidade"
-								value="${pessoaInstance?.localidade}" /></td>
-					</tr>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.uf.label" default="UF" /></td>
-						<td valign="top" class="value"><g:textField name="uf"
-								value="${pessoaInstance?.uf}" /></td>
-					</tr>
-					<tr class="prop">
-						<td valign="top" class="name"><g:message
-								code="pessoa.ibge.label" default="IBGE" /></td>
-						<td valign="top" class="value"><g:textField name="ibge"
-								value="${pessoaInstance?.ibge}" /></td>
-					</tr>
-				</tbody>
-			</table>
+
 		</div>
+		
+		
 </body>
 </html>
